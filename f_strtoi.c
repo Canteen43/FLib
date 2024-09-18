@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "flib.h"
+
 /*Converts a string to an integer. Returns -1 on Error and 0 on Success.
 Errors include: non-digit characters, multiple minuses, number outside of INT
 limits, and empty strings.

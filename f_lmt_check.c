@@ -6,11 +6,12 @@
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/17 14:10:23 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/09/18 23:47:18 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header.h"
+#include "flib.h"
+
 /*Takes an int value and a char next. It checkes if adding the char next
 (which has to be a number digit) to the end of the int value would result in 
 crossing the INT limits. Returns 1 if limits would be crossed and 0 if not.*/
