@@ -12,6 +12,9 @@
 
 #include "flib.h"
 
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
 void	f_miniprint(char *str, ...)
 {
 	va_list	args;
