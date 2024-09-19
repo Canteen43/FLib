@@ -15,8 +15,10 @@
 
 # include <limits.h>	// INT_MIN and INT_MAX
 # include <stddef.h>	// NULL
+# include <stdarg.h>	// va_list, va_start, va_arg, va_end
 
-int f_strtoi(char *str, int *num);
-int	f_lmt_check(int value, char next);
+int		f_strtoi(char *str, int *num);
+int		f_lmt_check(int value, char next);
+void	f_miniprint(char *str, ...);
 
 #endif // FLIB_H
