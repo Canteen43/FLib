@@ -22,6 +22,10 @@ LIB1 = $(LIB_DIR1)libft.a
 SRC_FILES +=	f_lmt_check.c
 SRC_FILES +=	f_miniprint.c
 SRC_FILES +=	f_strtoi.c
+SRC_FILES +=	f_pexit.c
+SRC_FILES +=	f_alc_add.c
+SRC_FILES +=	f_alc_double.c
+SRC_FILES +=	f_alc_init.c
 
 # Object files
 OBJ_FILES = $(SRC_FILES:%.c=%.o)
@@ -32,18 +36,18 @@ all: $(TARGET)
 $(LIB1):
 	$(MAKE) -C $(LIB_DIR1) all
 
-$(TARGET): $(OBJ_FILES)
-	ar rcs $(NAME) $(OBJ_FILES) $(LIB1)
+$(TARGET): $(LIB1) $(OBJ_FILES)
+	ar rcs $(TARGET) $(OBJ_FILES) $(LIB1)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -f $(OBJ_FILES)
 	$(MAKE) -C $(LIB_DIR1) clean
 
 fclean: clean
-	rm -f $(SERVER) $(CLIENT)
+	rm -f $(TARGET)
 	$(MAKE) -C $(LIB_DIR1) fclean
 
 re: fclean all

@@ -24,7 +24,7 @@ int f_strtoi(char *str, int *num)
 	sign = 1;
 	if (str == NULL)
 		return (-1);
-	if (*str != '\0')
+	if (*str == '\0')
 		return (-1);
 	while (*str == ' ' || *str == '\t')
 	{
@@ -37,10 +37,11 @@ int f_strtoi(char *str, int *num)
 	}
 	while (*str != '\0')
 	{
-		if (str++ >= '0' && str++ <= '9' && f_lmt_check(*num, *str) == 0)
-			*num = *num * 10 + sign * (str++ - '0');
+		if (*str >= '0' && *str <= '9' && f_lmt_check(*num, *str) == 0)
+			*num = *num * 10 + sign * (*str - '0');
 		else
 			return (-1);
+		str++;
 	}
 	return (0);
 }

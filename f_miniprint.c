@@ -18,10 +18,9 @@ void	ft_putstr_fd(char *s, int fd);
 void	f_miniprint(char *str, ...)
 {
 	va_list	args;
-	char	*str;
+	char	*string;
 
 	va_start(args, str);
-	i = 0;
 	while (*str != '\0')
 	{
 		if (*str == '%' && *(str + 1) != '\0')
@@ -31,10 +30,10 @@ void	f_miniprint(char *str, ...)
 				ft_putnbr_fd(va_arg(args, int), 1);
 			else if (*str == 's')
 			{
-				str = va_arg(args, char *);
-				if (str == NULL)
+				string = va_arg(args, char *);
+				if (string == NULL)
 					write(1, "(null)", 6);
-				ft_putstr_fd(str, 1);
+				ft_putstr_fd(string, 1);
 			}
 		}
 		else
