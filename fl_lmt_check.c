@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_lmt_check.c                                      :+:      :+:    :+:   */
+/*   fl_lmt_check.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/18 23:47:18 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/06 20:32:48 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*Takes an int value and a char next. It checkes if adding the char next
 (which has to be a number digit) to the end of the int value would result in 
 crossing the INT limits. Returns 1 if limits would be crossed and 0 if not.*/
-int	f_lmt_check(int value, char next)
+int	fl_lmt_check(int value, char next)
 {
 	if (value > 0)
 	{

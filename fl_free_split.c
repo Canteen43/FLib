@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_free_split.c                                     :+:      :+:    :+:   */
+/*   fl_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:45:16 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/30 17:46:07 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:04:16 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "flib.h"
 
-void	f_free_split(char **ptr)
+void	fl_free_split(char **ptr)
 {
 	int	i;
 

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_alc_init.c                                       :+:      :+:    :+:   */
+/*   fl_pexit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 15:59:27 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/19 15:59:27 by kweihman         ###   ########.fr       */
+/*   Created: 2024/09/19 11:56:53 by kweihman          #+#    #+#             */
+/*   Updated: 2024/10/06 20:33:07 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flib.h"
 
-int		f_alc_init(t_alc *arr, size_t cap)
+void	fl_pexit(char *str)
 {
-	arr->head = malloc(cap * sizeof(char));
-	if (arr->head == NULL)
-		return (-1);
-	arr->cap = cap;
-	arr->len = 0;
-	return (0);
+	fl_miniprint("Error: %s\n", str);
+	exit(1);
 }

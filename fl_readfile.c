@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_readfile.c                                       :+:      :+:    :+:   */
+/*   fl_readfile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:35:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/30 17:43:52 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:07:13 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strjoin(char const *s1, char const *s2);
 void		ft_bzero(void *s, size_t n);
 
-static char	*f_readfile(ind fd)
+char	*fl_readfile(int fd)
 {
 	char	*str;
 	char	*old_str;
@@ -31,7 +31,7 @@ static char	*f_readfile(ind fd)
 		ft_bzero(buf, BUFFER_SIZE);
 		read_rt = read(fd, buf, BUFFER_SIZE - 1);
 		if (read_rt == -1)
-			return (NULL);
+			return (NULL); // I need to free str here
 		if (read_rt == 0)
 			break ;
 		old_str = str;

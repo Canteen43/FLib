@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_strtoi.c                                         :+:      :+:    :+:   */
+/*   fl_strtoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:34:53 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/17 13:34:53 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/06 20:33:43 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Errors include: non-digit characters, multiple minuses, number outside of INT
 limits, and empty strings.
 Ignores leading whitespace (' ' and '\t'), accepts one minus.*/
-int f_strtoi(char *str, int *num)
+int fl_strtoi(char *str, int *num)
 {
 	int sign;
 
@@ -37,7 +37,7 @@ int f_strtoi(char *str, int *num)
 	}
 	while (*str != '\0')
 	{
-		if (*str >= '0' && *str <= '9' && f_lmt_check(*num, *str) == 0)
+		if (*str >= '0' && *str <= '9' && fl_lmt_check(*num, *str) == 0)
 			*num = *num * 10 + sign * (*str - '0');
 		else
 			return (-1);

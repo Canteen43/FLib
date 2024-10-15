@@ -19,13 +19,15 @@ LIB_DIR1 = ../Libft/
 LIB1 = $(LIB_DIR1)libft.a
 
 # Source files
-SRC_FILES +=	f_lmt_check.c
-SRC_FILES +=	f_miniprint.c
-SRC_FILES +=	f_strtoi.c
-SRC_FILES +=	f_pexit.c
-SRC_FILES +=	f_alc_add.c
-SRC_FILES +=	f_alc_double.c
-SRC_FILES +=	f_alc_init.c
+SRC_FILES += fl_alc_add.c
+SRC_FILES += fl_alc_double.c
+SRC_FILES += fl_alc_init.c
+SRC_FILES += fl_free_split.c
+SRC_FILES += fl_lmt_check.c
+SRC_FILES += fl_miniprint.c
+SRC_FILES += fl_pexit.c
+SRC_FILES += fl_readfile.c
+SRC_FILES += fl_strtoi.c
 
 # Object files
 OBJ_FILES = $(SRC_FILES:%.c=%.o)

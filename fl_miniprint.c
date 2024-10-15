@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_miniprint.c                                      :+:      :+:    :+:   */
+/*   fl_miniprint.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 00:01:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/19 00:01:19 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/06 20:32:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
-void	f_miniprint(char *str, ...)
+void	fl_miniprint(char *str, ...)
 {
 	va_list	args;
 	char	*string;

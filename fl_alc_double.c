@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f_alc_add.c                                        :+:      :+:    :+:   */
+/*   fl_alc_double.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 15:50:10 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/19 15:50:10 by kweihman         ###   ########.fr       */
+/*   Created: 2024/09/19 15:53:14 by kweihman          #+#    #+#             */
+/*   Updated: 2024/10/06 20:32:34 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flib.h"
 
-int f_alc_add(t_alc *arr, char c)
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+int fl_alc_double(t_alc *arr)
 {
-    if (arr->len == arr->cap)
-        if (f_alc_double(arr) == -1)
-            return (-1);
-    arr->head[arr->len] = c;
-    arr->len++;
-    return (0);
+	char	*new_head;
+	size_t	new_cap;
+
+	new_cap = arr->cap * 2;
+	new_head = malloc(new_cap * sizeof(char));
+	if (new_head == NULL)
+		return (-1);
+	ft_memcpy(new_head, arr->head, arr->len);
+	free(arr->head);
+	arr->head = new_head;
+	arr->cap = new_cap;
+	return (0);
 }

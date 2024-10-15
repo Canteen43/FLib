@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   flib.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:16:07 by kweihman          #+#    #+#             */
-/*   Updated: 2024/05/15 18:40:38 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:06:26 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 # include <stdlib.h>	// exit
 # include <stdlib.h>	// malloc, free
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif // BUFFER_SIZE
+
 typedef struct s_arraylist_char
 {
 	char*	head;
@@ -27,11 +31,15 @@ typedef struct s_arraylist_char
 	size_t	len;
 }	t_alc;
 
-int		f_strtoi(char *str, int *num);
-int		f_lmt_check(int value, char next);
-void	f_miniprint(char *str, ...);
-int		f_alc_add(t_alc *arr, char c);
-int		f_alc_double(t_alc *arr);
-int		f_alc_init(t_alc *arr, size_t cap);
+int		fl_strtoi(char *str, int *num);
+int		fl_lmt_check(int value, char next);
+int		fl_alc_add(t_alc *arr, char c);
+int		fl_alc_double(t_alc *arr);
+int		fl_alc_init(t_alc *arr, size_t cap);
+void	fl_miniprint(char *str, ...);
+void	fl_free_split(char **ptr);
+void	fl_pexit(char *str);
+char	*fl_readfile(int fd);
+
 
 #endif // FLIB_H
