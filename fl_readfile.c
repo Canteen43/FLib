@@ -6,12 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:35:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:47:07 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:57:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flib.h"
 
+// From Libft
 char		*ft_strjoin(char const *s1, char const *s2);
 void		ft_bzero(void *s, size_t n);
 
