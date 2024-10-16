@@ -6,12 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 00:01:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:45:18 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:54:04 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flib.h"
 
+// From Libft
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
