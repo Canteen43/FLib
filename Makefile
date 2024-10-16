@@ -10,7 +10,7 @@ ifeq ($(DEBUG), 1)
 endif
 
 # Targets
-TARGET = flib.a
+TARGET = libkarlito.a #flib.a
 
 # Directories
 LIB_DIR1 = ../Libft/
@@ -28,6 +28,7 @@ SRC_FILES += fl_miniprint.c
 SRC_FILES += fl_pexit.c
 SRC_FILES += fl_readfile.c
 SRC_FILES += fl_strtoi.c
+SRC_FILES += fl_str_switch_chr.c
 
 # Object files
 OBJ_FILES = $(SRC_FILES:%.c=%.o)

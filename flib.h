@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:16:07 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/14 10:06:26 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 07:47:40 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	fl_miniprint(char *str, ...);
 void	fl_free_split(char **ptr);
 void	fl_pexit(char *str);
 char	*fl_readfile(int fd);
+void	fl_str_switch_chr(char *str, char old, char new);
 
 
 #endif // FLIB_H
