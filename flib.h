@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   flib.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:16:07 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 07:47:40 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:47:34 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 typedef struct s_arraylist_char
 {
-	char*	head;
+	char	*head;
 	size_t	cap;
 	size_t	len;
 }	t_alc;
@@ -41,6 +41,5 @@ void	fl_free_split(char **ptr);
 void	fl_pexit(char *str);
 char	*fl_readfile(int fd);
 void	fl_str_switch_chr(char *str, char old, char new);
-
 
 #endif // FLIB_H

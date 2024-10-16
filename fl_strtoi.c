@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fl_strtoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kweihman <kweihman@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:34:53 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/06 20:33:43 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:48:23 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 Errors include: non-digit characters, multiple minuses, number outside of INT
 limits, and empty strings.
 Ignores leading whitespace (' ' and '\t'), accepts one minus.*/
-int fl_strtoi(char *str, int *num)
+int	fl_strtoi(char *str, int *num)
 {
-	int sign;
+	int	sign;
 
 	*num = 0;
 	sign = 1;
@@ -44,4 +44,5 @@ int fl_strtoi(char *str, int *num)
 		str++;
 	}
 	return (0);
+	// WIP: Too many function lines.
 }
