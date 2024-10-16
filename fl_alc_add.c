@@ -6,12 +6,14 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:50:10 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:46:08 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:06:09 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flib.h"
 
+/*Adds a character to the end of the character arraylist. Returns -1 on Error 
+and 0 on Success.*/
 int	fl_alc_add(t_alc *arr, char c)
 {
 	if (arr->len == arr->cap)

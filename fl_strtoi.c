@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:34:53 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:48:23 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:04:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	fl_strtoi(char *str, int *num)
 	if (*str == '\0')
 		return (-1);
 	while (*str == ' ' || *str == '\t')
-	{
 		str++;
-	}
 	if (*str == '-')
 	{
 		sign = -1;
@@ -44,5 +42,4 @@ int	fl_strtoi(char *str, int *num)
 		str++;
 	}
 	return (0);
-	// WIP: Too many function lines.
 }

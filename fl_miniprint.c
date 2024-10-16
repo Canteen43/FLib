@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 00:01:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:54:04 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:08:30 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
+/*A mini version of printf. Handles strings and ints.*/
 void	fl_miniprint(char *str, ...)
 {
 	va_list	args;

@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:35:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/10/16 13:57:58 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:04:29 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 char		*ft_strjoin(char const *s1, char const *s2);
 void		ft_bzero(void *s, size_t n);
 
+// Helper function
+static void	*fl_free_n_ret_null(void *ptr);
+
+/*Gets a fd from a file that needs to be ready to be read from. Returns a
+pointer to the string read.*/
 char	*fl_readfile(int fd)
 {
 	char	*str;
@@ -32,7 +37,7 @@ char	*fl_readfile(int fd)
 		ft_bzero(buf, BUFFER_SIZE);
 		read_rt = read(fd, buf, BUFFER_SIZE - 1);
 		if (read_rt == -1)
-			return (NULL); // WIP: I need to free str here
+			return (fl_free_n_ret_null(str));
 		if (read_rt == 0)
 			break ;
 		old_str = str;
@@ -42,4 +47,10 @@ char	*fl_readfile(int fd)
 			return (NULL);
 	}
 	return (str);
+}
+
+static void	*fl_free_n_ret_null(void *ptr)
+{
+	free(ptr);
+	return (NULL);
 }
