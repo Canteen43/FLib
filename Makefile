@@ -10,7 +10,7 @@ ifeq ($(DEBUG), 1)
 endif
 
 # Targets
-TARGET = libkarlito.a #flib.a
+TARGET = flib.a
 
 # Directories
 LIB_DIR1 = ../Libft/
